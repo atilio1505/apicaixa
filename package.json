@@ -1,0 +1,24 @@
+{
+  "name": "apicaixa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "yarn": "1.x",
+    "node": "12.14.x"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js --config nodemon.json",
+    "predev": "npx standard --fix",
+    "start": "node src/index.js"
+  },
+  "devDependencies": {
+    "standard": "^14.3.3",
+    "nodemon": "^2.0.2"
+  }
+}
