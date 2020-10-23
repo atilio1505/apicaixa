@@ -76,7 +76,7 @@ function alterarDados (nomeLoteria, dados) {
 
   dataStr = dados.dataStr || dados.dt_apuracaoStr || dados.dt_APURACAOStr || dados.data
 
-  valor = dados.valor_acumulado || dados.vrAcumulado || dados.valor || dados.vr_rateio_faixa1 || dados.vrRateioFaixa1 || dados.vr_ACUMULADO_FAIXA_1 || dados.vr_RATEIO_FAIXA_1 || dados.valor_sena1 || dados.valor_acumulado_sena1 || dados.vr_acumulado_especial || dados.valorAcumuladoProximoConcurso
+  valor = dados.valor_acumulado || dados.vrAcumulado || dados.valor || dados.vr_rateio_faixa1 || dados.vrRateioFaixa1 || dados.vr_ACUMULADO_FAIXA_1 || dados.vr_RATEIO_FAIXA_1 || dados.valor_sena1 || dados.valor_acumulado_sena1 || dados.vr_acumulado_especial || dados.valorAcumuladoProximoConcurso || dados.valorEstimadoProximoConcurso
 
   if (dados.vrEstimativa) {
     valor = typeof (dados.vrEstimativa) === 'string' ? parseFloat(dados.vrEstimativa.replace(/\./g, '').replace(',', '.')) : dados.vrEstimativa
