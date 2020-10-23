@@ -72,7 +72,7 @@ function alterarDados (nomeLoteria, dados) {
 
   ganhadores = parseInt(dados.ganhadores || dados.qt_ganhador_faixa1 || dados.qtGanhadoresFaixa1 || dados.qt_GANHADOR_FAIXA_1 || dados.ganhadores_sena1)
 
-  concurso = dados.concurso || dados.nu_concurso || dados.nu_CONCURSO || data.numero
+  concurso = dados.concurso || dados.nu_concurso || dados.nu_CONCURSO || data.nuConcurso
 
   dataStr = dados.dataStr || dados.dt_apuracaoStr || dados.dt_APURACAOStr || dados.data || data.dataApuracao
 
