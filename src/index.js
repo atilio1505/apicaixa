@@ -90,7 +90,7 @@ function alterarDados (nomeLoteria, dados) {
 
   sorteioAcumulado = dados.sorteioAcumulado || dados.acumulado
 
-  return { nomeLoteria: nomeLoteria.replace('_', ' '), ...dados, sorteioAcumulado, resultado, ganhadores, concurso, dataStr, valor, numero }
+  return { nomeLoteria: nomeLoteria.replace('_', ' '), ...dados, sorteioAcumulado, resultado, ganhadores, concurso, dataStr, valor, numero2 }
 }
 
 async function todos () {
