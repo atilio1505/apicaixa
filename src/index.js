@@ -88,6 +88,10 @@ function alterarDados (nomeLoteria, dados) {
 
   sorteioAcumulado = dados.sorteioAcumulado || dados.acumulado
 
+  if(sorteioAcumulado == false){
+    valor = dados.listaGanhadores['valorPremio']
+  }
+
   return { nomeLoteria: nomeLoteria.replace('_', ' '), ...dados, sorteioAcumulado, resultado, ganhadores, concurso, dataStr, valor }
 }
 
