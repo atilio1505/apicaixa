@@ -72,9 +72,7 @@ function alterarDados (nomeLoteria, dados) {
 
   listaGanhadores = dados.listaRateioPremio[0]
 
-  teste  = listaGanhadores['numeroDeGanhadores']
-
-  ganhadores = parseInt(dados.ganhadores || dados.qt_ganhador_faixa1 || dados.qtGanhadoresFaixa1 || dados.qt_GANHADOR_FAIXA_1 || dados.ganhadores_sena1 || dados.numeroDeGanhadores)
+  ganhadores = parseInt(dados.ganhadores || dados.qt_ganhador_faixa1 || dados.qtGanhadoresFaixa1 || dados.qt_GANHADOR_FAIXA_1 || dados.ganhadores_sena1 || dados.numeroDeGanhadores || listaGanhadores['numeroDeGanhadores'])
 
   concurso = dados.concurso || dados.nu_concurso || dados.nu_CONCURSO
 
