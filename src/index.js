@@ -88,7 +88,15 @@ function alterarDados (nomeLoteria, dados) {
     valor = typeof (dados.valorEstimadoProximoConcurso) === 'string' ? parseFloat(dados.valorEstimadoProximoConcurso.replace(/\./g, '').replace(',', '.')) : dados.valorEstimadoProximoConcurso
   }
 
+  if (teste) {
+    valor = typeof (teste) === 'string' ? parseFloat(teste.replace(/\./g, '').replace(',', '.')) : teste
+  }
+
   sorteioAcumulado = dados.sorteioAcumulado || dados.acumulado
+
+  // if (sorteioAcumulado != true){
+  //   valor = listaGanhadores['valorPremio']
+  // }
 
   return { nomeLoteria: nomeLoteria.replace('_', ' '), ...dados, sorteioAcumulado, resultado, ganhadores, concurso, dataStr, valor, teste }
 }
