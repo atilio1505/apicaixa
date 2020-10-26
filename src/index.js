@@ -74,7 +74,7 @@ function alterarDados (nomeLoteria, dados) {
 
   ganhadores  = listaGanhadores['numeroDeGanhadores']
 
-  teste = listaGanhadores['valorPremio']
+  valorPremio = listaGanhadores['valorPremio']
 
   //ganhadores = parseInt(dados.ganhadores || dados.qt_ganhador_faixa1 || dados.qtGanhadoresFaixa1 || dados.qt_GANHADOR_FAIXA_1 || dados.ganhadores_sena1 || dados.numeroDeGanhadores)
 
@@ -88,17 +88,17 @@ function alterarDados (nomeLoteria, dados) {
     valor = typeof (dados.valorEstimadoProximoConcurso) === 'string' ? parseFloat(dados.valorEstimadoProximoConcurso.replace(/\./g, '').replace(',', '.')) : dados.valorEstimadoProximoConcurso
   }
 
-  if (teste) {
-    teste = typeof (teste) === 'string' ? parseFloat(teste.replace(/\./g, '').replace(',', '.')) : teste
+  if (valorPremio) {
+    valorPremio = typeof (valorPremio) === 'string' ? parseFloat(valorPremio.replace(/\./g, '').replace(',', '.')) : valorPremio
   }
 
   sorteioAcumulado = dados.sorteioAcumulado || dados.acumulado
 
-  // if (sorteioAcumulado != true){
-  //   valor = listaGanhadores['valorPremio']
-  // }
+  if (sorteioAcumulado != true){
+    valor = valorPremio
+  }
 
-  return { nomeLoteria: nomeLoteria.replace('_', ' '), ...dados, sorteioAcumulado, resultado, ganhadores, concurso, dataStr, valor, teste }
+  return { nomeLoteria: nomeLoteria.replace('_', ' '), ...dados, sorteioAcumulado, resultado, ganhadores, concurso, dataStr, valor }
 }
 
 async function todos () {
