@@ -70,7 +70,7 @@ function alterarDados (nomeLoteria, dados) {
     resultado = dados.resultado
   }
 
-  listaGanhadores = dados.listaRateioPremio[1]
+  listaGanhadores = dados.listaRateioPremio[0]
 
   teste  = listaGanhadores["NUMERODEGANHADORES"]
 
