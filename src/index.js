@@ -88,7 +88,7 @@ function alterarDados (nomeLoteria, dados) {
 
   sorteioAcumulado = dados.sorteioAcumulado || dados.acumulado
 
-  if(sorteioAcumulado == false){
+  if(sorteioAcumulado != true){
     valor = dados.listaGanhadores['valorPremio']
   }
 
