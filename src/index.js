@@ -89,7 +89,7 @@ function alterarDados (nomeLoteria, dados) {
   }
 
   if (teste) {
-    valor = typeof (teste) === 'string' ? parseFloat(teste.replace(/\./g, '').replace(',', '.')) : teste
+    teste = typeof (teste) === 'string' ? parseFloat(teste.replace(/\./g, '').replace(',', '.')) : teste
   }
 
   sorteioAcumulado = dados.sorteioAcumulado || dados.acumulado
