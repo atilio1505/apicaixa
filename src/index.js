@@ -74,6 +74,8 @@ function alterarDados (nomeLoteria, dados) {
 
   ganhadores  = listaGanhadores['numeroDeGanhadores']
 
+  teste = listaGanhadores['valorPremio']
+
   //ganhadores = parseInt(dados.ganhadores || dados.qt_ganhador_faixa1 || dados.qtGanhadoresFaixa1 || dados.qt_GANHADOR_FAIXA_1 || dados.ganhadores_sena1 || dados.numeroDeGanhadores)
 
   concurso = dados.concurso || dados.nu_concurso || dados.nu_CONCURSO || dados.numero
@@ -87,8 +89,6 @@ function alterarDados (nomeLoteria, dados) {
   }
 
   sorteioAcumulado = dados.sorteioAcumulado || dados.acumulado
-
-  teste = dados.listaGanhadores['valorPremio']
 
   return { nomeLoteria: nomeLoteria.replace('_', ' '), ...dados, sorteioAcumulado, resultado, ganhadores, concurso, dataStr, valor, teste }
 }
