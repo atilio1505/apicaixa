@@ -78,7 +78,7 @@ function alterarDados (nomeLoteria, dados) {
 
   concurso = dados.concurso || dados.nu_concurso || dados.nu_CONCURSO || dados.numero
 
-  dataStr = dados.dataStr || dados.dt_apuracaoStr || dados.dt_APURACAOStr || dados.data
+  dataStr = dados.dataStr || dados.dt_apuracaoStr || dados.dt_APURACAOStr || dados.data || dados.dataApuracao
 
   valor = dados.valor_acumulado || dados.vrAcumulado || dados.valor || dados.vr_rateio_faixa1 || dados.vrRateioFaixa1 || dados.vr_ACUMULADO_FAIXA_1 || dados.vr_RATEIO_FAIXA_1 || dados.valor_sena1 || dados.valor_acumulado_sena1 || dados.vr_acumulado_especial || dados.valorEstimadoProximoConcurso
 
